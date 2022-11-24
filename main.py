@@ -17,7 +17,7 @@ def allowed_file(filename):
 
 @app.route('/')
 def upload_form():
-    return render_template('upload.html')
+    return render_template("upload.html")
 
 
 @app.route('/', methods=['POST'])
