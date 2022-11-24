@@ -52,7 +52,8 @@ def upload_image():
             file_object = io.BytesIO()
             img = Image.fromarray(Helpers.resize(img, width=500))
             img.save(file_object, 'PNG')
-            base64img = "data:image/png;base64," + base64.b64encode(file_object.getvalue()).decode('ascii')
+            base64img = "data:image/png;base64," + \
+                base64.b64encode(file_object.getvalue()).decode('ascii')
             images.append([message, base64img])
 
     print("images:", len(images))
